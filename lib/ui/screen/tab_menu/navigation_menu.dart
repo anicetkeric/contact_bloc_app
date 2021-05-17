@@ -63,7 +63,6 @@ class _NavigationMenuState extends State<NavigationMenu> {
         ],
         currentIndex: _pageIndex,
         onTap: (int index) {
-          print('index $index');
           setState(
                 () {
               _pageIndex = index;

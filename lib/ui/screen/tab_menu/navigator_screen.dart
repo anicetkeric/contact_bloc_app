@@ -21,7 +21,6 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print('index ${widget.screenIndex}');
     return Navigator(
       key: widget.navigatorKey,
       onGenerateRoute: (RouteSettings settings) {
