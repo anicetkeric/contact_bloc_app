@@ -5,7 +5,7 @@ class AppTheme {
 
   static final lightTheme = ThemeData(
       primarySwatch: Colors.blue,
-      primaryColor: Colors.lightBlue,
+      primaryColor: Color(0xff0073c7),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       errorColor: Colors.red[400],
       indicatorColor: Colors.green[300],
