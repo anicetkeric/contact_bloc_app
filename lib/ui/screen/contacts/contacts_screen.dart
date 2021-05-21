@@ -4,6 +4,7 @@ import 'package:contact_bloc_app/core/constants/route_constants.dart';
 import 'package:contact_bloc_app/core/constants/strings.dart';
 import 'package:contact_bloc_app/data/json/dummy_json.dart';
 import 'package:contact_bloc_app/data/models/contact_model.dart';
+import 'package:contact_bloc_app/ui/widget/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class ContactScreen extends StatefulWidget {
@@ -15,18 +16,7 @@ class _ContactScreenState extends State<ContactScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(Strings.appTitle),
-        actions: [
-          IconButton(
-            tooltip: "Search",
-            icon: Icon(Icons.search),
-            onPressed: () {
-            },
-          )
-        ],
-      ),
+      appBar: Appbar(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).primaryColor,
         onPressed: () {

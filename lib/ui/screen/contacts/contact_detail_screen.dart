@@ -1,3 +1,4 @@
+import 'package:contact_bloc_app/ui/widget/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class ContactDetailScreen extends StatefulWidget {
@@ -9,23 +10,7 @@ class _ContactDetailScreenState extends State<ContactDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-                elevation: 0,
-                actions: <Widget>[
-                  IconButton(
-                    color: Colors.white,
-                    icon: Icon(Icons.star_border),
-                    onPressed: () {
-                    },
-                  ),
-                  IconButton(
-                    color: Colors.white,
-                    icon: Icon(Icons.edit),
-                    onPressed: () {
-                    },
-                  ),
-                ],
-     ),
+      appBar: Appbar(),
       body: ListView(
         children: <Widget>[
           Column(

@@ -1,3 +1,4 @@
+import 'package:contact_bloc_app/ui/widget/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteScreen extends StatefulWidget {
@@ -8,9 +9,10 @@ class FavoriteScreen extends StatefulWidget {
 class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        child: Center(
-          child: Text('favorite'),
+    return  Scaffold(
+        appBar: Appbar(),
+        body: Center(
+          child: Text('recent'),
         )
     );
   }
