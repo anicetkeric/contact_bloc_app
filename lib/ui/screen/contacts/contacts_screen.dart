@@ -1,10 +1,8 @@
 import 'dart:math';
 
-import 'package:contact_bloc_app/core/constants/route_constants.dart';
-import 'package:contact_bloc_app/core/constants/strings.dart';
-import 'package:contact_bloc_app/data/json/dummy_json.dart';
 import 'package:contact_bloc_app/data/models/contact_model.dart';
 import 'package:contact_bloc_app/ui/widget/app_bar.dart';
+import 'package:contact_bloc_app/ui/widget/dialpad_floating_action.dart';
 import 'package:flutter/material.dart';
 
 class ContactScreen extends StatefulWidget {
@@ -17,18 +15,8 @@ class _ContactScreenState extends State<ContactScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Appbar(),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).primaryColor,
-        onPressed: () {
-          //context.read<TodoCubit>().createTodo(this.title);
-          Navigator.pushNamed(context, RouteConstants.contacts_details);
-
-        },
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-      ),
+      floatingActionButton: DialPadFloatingAction(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Container(
         child: RefreshIndicator(
           child: ListView.builder(
@@ -37,15 +25,15 @@ class _ContactScreenState extends State<ContactScreen> {
               Contact _model = contactDummyData[index];
               return Column(
                 children: <Widget>[
-                  Divider(
+                /*  Divider(
                     height: 12.0,
-                  ),
+                  ),*/
                   ListTile(
                     leading: CircleAvatar(
                       backgroundColor: Colors.primaries[Random().nextInt(Colors.primaries.length)],
                       child: Text(
                         _model.name.substring(0, 1).toUpperCase(),
-                        style: TextStyle(fontSize: 26, color: Colors.white70),
+                        style: TextStyle(fontSize: 18, color: Colors.white70),
                       ),
                     ),
                     title: Row(
@@ -75,3 +63,10 @@ class _ContactScreenState extends State<ContactScreen> {
     });
   }
 }
+List<Contact> contactDummyData = [
+  Contact(id: 1, name: "Laurent", phone: "097846578", email: "Laurent@yahoo.fr", website: "website"),
+  Contact(id: 2, name: "Avenu demau", phone: "096757", email: "Laurent@yahoo.fr", website: "website"),
+  Contact(id: 3, name: "Tearima", phone: "087656747", email: "Laurent@yahoo.fr", website: "website"),
+  Contact(id: 4, name: "Sirux", phone: "4587989", email: "Laurent@yahoo.fr", website: "website"),
+  Contact(id: 5, name: "Spatarcus", phone: "546673663", email: "Laurent@yahoo.fr", website: "website")
+] ;
