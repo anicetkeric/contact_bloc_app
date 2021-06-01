@@ -58,7 +58,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
-            label: 'My favorites',
+            label: 'My Favorites',
           ),
         ],
         currentIndex: _pageIndex,

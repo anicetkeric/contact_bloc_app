@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:contact_bloc_app/data/models/contact_model.dart';
 import 'package:contact_bloc_app/ui/widget/app_bar.dart';
-import 'package:contact_bloc_app/ui/widget/dialpad_floating_action.dart';
+import 'package:contact_bloc_app/ui/widget/new_contacts_floating_action.dart';
 import 'package:flutter/material.dart';
 
 class ContactScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class _ContactScreenState extends State<ContactScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Appbar(),
-      floatingActionButton: DialPadFloatingAction(),
+      floatingActionButton: NewContactFloatingAction(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Container(
         child: RefreshIndicator(
