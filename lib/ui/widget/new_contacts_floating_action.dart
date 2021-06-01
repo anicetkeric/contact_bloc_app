@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DialPadFloatingAction extends StatelessWidget {
+class NewContactFloatingAction extends StatelessWidget {
 
 
   @override
