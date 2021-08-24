@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:contact_bloc_app/core/constants/route_constants.dart';
 import 'package:contact_bloc_app/data/models/contact_model.dart';
 import 'package:contact_bloc_app/ui/widget/app_bar.dart';
 import 'package:contact_bloc_app/ui/widget/new_contacts_floating_action.dart';
@@ -53,6 +54,9 @@ class _ContactScreenState extends State<ContactScreen> {
                         )
                       ],
                     ),
+                  onTap: () => {
+                  Navigator.pushReplacementNamed(context, RouteConstants.contact_add)
+                   },
                   ),
                 ],
               );

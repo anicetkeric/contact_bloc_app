@@ -1,3 +1,5 @@
+import 'package:contact_bloc_app/core/constants/route_constants.dart';
+import 'package:contact_bloc_app/ui/screen/contacts/contact_add_screen.dart';
 import 'package:flutter/material.dart';
 
 class NewContactFloatingAction extends StatelessWidget {
@@ -9,7 +11,17 @@ class NewContactFloatingAction extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
         heroTag:  null,
         onPressed: () {
-          print("Add new contacts");
+       /*   Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return ContactAddScreen();
+              }));
+*/
+
+          Navigator.of(context, rootNavigator: false).push(MaterialPageRoute(builder: (context) {
+            return ContactAddScreen();
+          }));
+
         },
         child: Icon(
           Icons.add,
