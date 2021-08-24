@@ -1,5 +1,6 @@
 import 'package:contact_bloc_app/core/constants/route_constants.dart';
 import 'package:contact_bloc_app/core/exceptions/route_exception.dart';
+import 'package:contact_bloc_app/ui/screen/contacts/contact_add_screen.dart';
 import 'package:contact_bloc_app/ui/screen/contacts/contact_detail_screen.dart';
 import 'package:contact_bloc_app/ui/screen/splash_screen.dart';
 import 'package:contact_bloc_app/ui/screen/tab_menu/navigation_menu.dart';
@@ -21,6 +22,10 @@ class AppRouter {
       case RouteConstants.contacts_details:
         return MaterialPageRoute(
           builder: (_) => ContactDetailScreen(),
+        );
+      case RouteConstants.contact_add:
+        return MaterialPageRoute(
+          builder: (_) => ContactAddScreen(),
         );
       default:
         throw const RouteException('Route not found!');

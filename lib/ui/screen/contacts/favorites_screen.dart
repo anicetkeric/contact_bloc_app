@@ -37,7 +37,20 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
         crossAxisSpacing: 20,
         childAspectRatio: 1.2,
         children: List.generate(contactDummyData.length, (index) {
-          return Container(
+          return
+            GestureDetector(
+                onTap: () {
+
+               /*   Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                    return ContactDetailScreen();
+                  }));
+*/
+                  //Navigator.pushNamed(context, RouteConstants.contact_add)
+                  },
+                child:
+            Container(
             padding: EdgeInsets.fromLTRB(10,10,10,0),
             height: 100,
             width: double.maxFinite,
@@ -63,7 +76,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                 ],
               ),
             ),
-          );
+          ));
         }),
       ),
     );
