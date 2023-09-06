@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 class Contact {
   int id;
   String name;
-  String username;
-  String email;
-  String work;
+  String? email;
+  String? work;
   String phone;
-  String website;
+  String? website;
 
   Contact({
-    @required this.id,
-    @required this.name,
+    required this.id,
+    required this.name,
     this.work,
-    @required this.phone,
+    required this.phone,
     this.email,
     this.website
   });

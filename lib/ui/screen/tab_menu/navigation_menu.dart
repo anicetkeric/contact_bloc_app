@@ -24,21 +24,21 @@ class _NavigationMenuState extends State<NavigationMenu> {
         child: WillPopScope(
           onWillPop: () async {
             return !await Navigator.maybePop(
-                navigatorKeys[_pageIndex].currentState.context);
+                navigatorKeys[_pageIndex]!.currentState!.context);
           },
           child: IndexedStack(
             index: _pageIndex,
             children: <Widget>[
               NavigatorScreen(
-                navigatorKey: navigatorKeys[0],
+                navigatorKey: navigatorKeys[0]!,
                 screenIndex: _pageIndex,
               ),
               NavigatorScreen(
-                navigatorKey: navigatorKeys[1],
+                navigatorKey: navigatorKeys[1]!,
                 screenIndex: _pageIndex,
               ),
               NavigatorScreen(
-                navigatorKey: navigatorKeys[2],
+                navigatorKey: navigatorKeys[2]!,
                 screenIndex: _pageIndex,
               ),
             ],

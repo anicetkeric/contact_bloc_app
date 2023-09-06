@@ -5,20 +5,20 @@ import 'contact_model.dart';
 
 class Recent {
   int id;
-  Contact contact;
-  String phoneNumber;
+  Contact? contact;
+  String? phoneNumber;
   DateTime dateStart;
-  DateTime dateEnd;
+  DateTime? dateEnd;
   CallType type;
-  String location;
+  String? location;
 
   Recent({
-    @required this.id,
+    required this.id,
     this.contact,
     this.phoneNumber,
-    @required this.dateStart,
+    required this.dateStart,
     this.dateEnd,
-    @required this.type,
+    required this.type,
     this.location
   });
 

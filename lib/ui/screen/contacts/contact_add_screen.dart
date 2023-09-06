@@ -34,7 +34,7 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
         icon: Icon(Icons.person),
       ),
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return 'Obrigatório';
         }
         return null;
@@ -66,14 +66,14 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
     );
 
     MaskedTextField inputPhoneNumber = new MaskedTextField(
-      maskedTextFieldController: _cPhoneNumber,
+      controller: _cPhoneNumber,
       mask: "(xxx) xxxxx-xxxx",
       maxLength: 16,
       keyboardType: TextInputType.phone,
-      inputDecoration: new InputDecoration(
+    /*  inputDecoration: new InputDecoration(
         labelText: "Telefone",
         icon: Icon(Icons.phone),
-      ),
+      ),*/
     );
 
     TextFormField inputEmail = TextFormField(
@@ -155,7 +155,7 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               onPressed: () {
-                if (_formKey.currentState.validate()) {
+                if (_formKey.currentState!.validate()) {
 
                 }
               },

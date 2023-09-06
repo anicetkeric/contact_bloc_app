@@ -4,7 +4,7 @@ import 'package:contact_bloc_app/ui/screen/contacts/recent_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavigatorScreen extends StatefulWidget {
-  NavigatorScreen({this.navigatorKey, this.screenIndex});
+  NavigatorScreen({required this.navigatorKey, required this.screenIndex});
 
   final int screenIndex;
   final GlobalKey navigatorKey;
