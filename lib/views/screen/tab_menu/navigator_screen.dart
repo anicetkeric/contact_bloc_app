@@ -1,6 +1,6 @@
-import 'package:contact_bloc_app/ui/screen/contacts/contacts_screen.dart';
-import 'package:contact_bloc_app/ui/screen/contacts/favorites_screen.dart';
-import 'package:contact_bloc_app/ui/screen/contacts/recent_screen.dart';
+import 'package:contact_bloc_app/views/screen/contacts/contacts_screen.dart';
+import 'package:contact_bloc_app/views/screen/contacts/favorites_screen.dart';
+import 'package:contact_bloc_app/views/screen/contacts/recent_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavigatorScreen extends StatefulWidget {

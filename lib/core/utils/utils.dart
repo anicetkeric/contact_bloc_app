@@ -34,7 +34,7 @@ class Utility {
   }
 
   static String getPassedTime(String date) {
-    if (date == null || date.isEmpty) {
+    if (date.isEmpty) {
       return '';
     }
     String msg = '';

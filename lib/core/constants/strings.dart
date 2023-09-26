@@ -7,5 +7,5 @@ class Strings {
   // button action title
   static final createTitleBtn = 'CREATE';
 
-  static final appCopyrightTitle = 'Copyright ©  2021';
+  static final appCopyrightTitle = 'Copyright ©  2023';
 }

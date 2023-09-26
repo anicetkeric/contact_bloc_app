@@ -1,7 +1,7 @@
 import 'package:contact_bloc_app/core/constants/route_constants.dart';
 import 'package:contact_bloc_app/core/constants/strings.dart';
 import 'package:contact_bloc_app/core/themes/app_theme.dart';
-import 'package:contact_bloc_app/ui/router/app_router.dart';
+import 'package:contact_bloc_app/views/router/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,5 @@ class App extends StatelessWidget {
         initialRoute: RouteConstants.splash,
         onGenerateRoute: AppRouter.onGenerateRoute,
     );
-
-
   }
 }

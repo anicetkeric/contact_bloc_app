@@ -1,5 +1,5 @@
 import 'package:contact_bloc_app/core/constants/route_constants.dart';
-import 'package:contact_bloc_app/ui/screen/contacts/contact_add_screen.dart';
+import 'package:contact_bloc_app/views/screen/contacts/contact_add_screen.dart';
 import 'package:flutter/material.dart';
 
 class NewContactFloatingAction extends StatelessWidget {

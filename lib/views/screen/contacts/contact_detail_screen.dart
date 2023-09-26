@@ -1,4 +1,4 @@
-import 'package:contact_bloc_app/ui/widget/app_bar.dart';
+import 'package:contact_bloc_app/views/widget/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class ContactDetailScreen extends StatefulWidget {

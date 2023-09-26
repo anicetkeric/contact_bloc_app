@@ -31,9 +31,9 @@ dependencies:
   bloc: ^8.1.2
   url_launcher: ^6.0.4
   flutter_sticky_header: ^0.6.0
-  masked_text: ^1.1.2
   grouped_list: ^4.0.0
   intl: ^0.18.1
+  mask_text_input_formatter: ^2.5.0
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:masked_text/masked_text.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class ContactAddScreen extends StatefulWidget {
   @override
@@ -30,12 +30,12 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
         LengthLimitingTextInputFormatter(45),
       ],
       decoration: InputDecoration(
-        labelText: 'Nome',
+        labelText: 'First Name',
         icon: Icon(Icons.person),
       ),
       validator: (value) {
         if (value!.isEmpty) {
-          return 'Obrigatório';
+          return 'Required';
         }
         return null;
       },
@@ -48,7 +48,7 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
         LengthLimitingTextInputFormatter(25),
       ],
       decoration: InputDecoration(
-        labelText: 'Apelido',
+        labelText: 'Last Name',
         icon: Icon(Icons.person),
       ),
     );
@@ -60,21 +60,29 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
       ],
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        labelText: 'Trabalho',
+        labelText: 'Work',
         icon: Icon(Icons.work),
       ),
     );
 
-    MaskedTextField inputPhoneNumber = new MaskedTextField(
+    MaskTextInputFormatter phoneFormatter(){
+      return MaskTextInputFormatter(mask: '+###-###-###-####', filter: { "#": RegExp(r'[0-9]') });
+    }
+
+    TextFormField inputPhoneNumber = TextFormField(
       controller: _cPhoneNumber,
-      mask: "(xxx) xxxxx-xxxx",
-      maxLength: 16,
+      inputFormatters: [
+        LengthLimitingTextInputFormatter(13),
+        phoneFormatter()
+      ],
       keyboardType: TextInputType.phone,
-    /*  inputDecoration: new InputDecoration(
-        labelText: "Telefone",
+      decoration: InputDecoration(
+        labelText: 'Phone',
         icon: Icon(Icons.phone),
-      ),*/
+      ),
     );
+
+
 
     TextFormField inputEmail = TextFormField(
       controller: _cEmail,
@@ -109,7 +117,7 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
           height: 120.0,
           child: CircleAvatar(
             child: Icon(
-              Icons.camera_alt,
+              Icons.person,
             ),
           ),
         ),
@@ -145,13 +153,13 @@ class _ContactAddScreenState extends State<ContactAddScreen> {
             Navigator.of(context).pop();
           },
         ),
-        title: Text("Criar novo contato"),
+        title: Text("Create new contact"),
         actions: <Widget>[
           Container(
             width: 80,
             child: IconButton(
               icon: Text(
-                'SALVAR',
+                'SAVE',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               onPressed: () {

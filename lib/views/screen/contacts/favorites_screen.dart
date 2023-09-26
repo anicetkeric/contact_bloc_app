@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:contact_bloc_app/data/json/dummy_json.dart';
-import 'package:contact_bloc_app/ui/widget/app_bar.dart';
-import 'package:contact_bloc_app/ui/widget/new_contacts_floating_action.dart';
+import 'package:contact_bloc_app/views/widget/app_bar.dart';
+import 'package:contact_bloc_app/views/widget/new_contacts_floating_action.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:contact_bloc_app/core/constants/route_constants.dart';
 import 'package:contact_bloc_app/data/models/contact_model.dart';
-import 'package:contact_bloc_app/ui/widget/app_bar.dart';
-import 'package:contact_bloc_app/ui/widget/new_contacts_floating_action.dart';
+import 'package:contact_bloc_app/views/widget/app_bar.dart';
+import 'package:contact_bloc_app/views/widget/new_contacts_floating_action.dart';
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 
@@ -20,6 +20,7 @@ class _ContactScreenState extends State<ContactScreen> {
       floatingActionButton: NewContactFloatingAction(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Container(
+        padding: EdgeInsets.only(top: 15),
         child: RefreshIndicator(
           child: GroupedListView<dynamic, String>(
             elements: contactDummyData,
